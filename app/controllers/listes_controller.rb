@@ -32,8 +32,7 @@ class ListesController < ApplicationController
     cleared_array = ingredients_array - ["", nil]
     cleared_array.each do |ingredient|
       nom = Ingredient.find(ingredient)
-      test = Ingredient.create!(nom: nom.nom, quantite: "")
-      raise
+      test = Ingredient.create!(nom: nom.nom, quantite: "", liste_id: @liste.id)
     end
   end
 end
