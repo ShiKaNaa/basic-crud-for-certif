@@ -18,5 +18,6 @@ Ingredient.create!(nom: "eau", quantite: 308, liste: Liste.first, unite: "g")
 Ingredient.create!(nom: "farine", quantite: 475, liste: Liste.first, unite: "g")
 Ingredient.create!(nom: "sel", quantite: 10, liste: Liste.first, unite: "g")
 Ingredient.create!(nom: "levure", quantite: 7, liste: Liste.first, unite: "g")
+Ingredient.create!(nom: "sucre", quantite: 10, liste: Liste.first, unite: "g")
 
 puts "Done !"

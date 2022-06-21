@@ -1,6 +1,13 @@
 class ListesController < ApplicationController
   def index
     @listes = Liste.all
-    @ingredients = Ingredient.all
+  end
+
+  def new
+
+  end
+
+  def create
+
   end
 end

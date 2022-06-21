@@ -1,5 +1,12 @@
 <h1>Voici les listes de courses</h1>
 
 <% @listes.each do |liste| %>
-<%= liste.nom %>
+<p><%= liste.nom %></p>
+  <ul>
+    <% liste.ingredients.each do |ingredient| %>
+    <li><%= ingredient.nom %></li>
+    <% end %>
+  </ul>
 <% end %>
+
+<%= link_to "Créer une nouvelle liste", new_liste_path %>
