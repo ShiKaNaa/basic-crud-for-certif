@@ -1,6 +1,7 @@
 <div class="container">
   <%= simple_form_for @liste do |f| %>
     <%= f.input :nom %>
+    <%= f.association :ingredients, as: :check_boxes %>
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
 </div>
