@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_125925) do
+ActiveRecord::Schema.define(version: 2022_06_21_131851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2022_06_21_125925) do
     t.bigint "liste_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "unite", default: ""
     t.index ["liste_id"], name: "index_ingredients_on_liste_id"
   end
 
