@@ -1,14 +1,18 @@
+<h1>Voici les listes de courses</h1>
+
 <div class="container">
-  <h1>Voici les listes de courses</h1>
 
   <% @listes.each do |liste| %>
-  <p><%= liste.nom %></p>
+  <div class="liste">
+    <p><%= liste.nom %></p>
     <ul>
       <% liste.ingredients.each do |ingredient| %>
       <li><%= ingredient.nom %></li>
       <% end %>
     </ul>
-  <p><%= link_to "Suprimer la recette", liste, method: :delete, data: { confirm: "Etes-vous sûr ?"} %></p>
+    <%= link_to "Suprimer la recette", liste, method: :delete, data: { confirm: "Etes-vous sûr ?"} %>
   <% end %>
+  </div>
+
   <%= link_to "Créer une nouvelle liste", new_liste_path %>
 </div>
